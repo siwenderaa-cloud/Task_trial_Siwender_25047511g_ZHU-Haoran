@@ -1,0 +1,20 @@
+{
+  "HBVCAM_USB_PartB.ino": "6edcd3460063564c59bb27a1ac76d857fcc1ff93e9c851d4fa2356207b1d2196",
+  "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "README.md": "66ca761ee52dfe6294d5f3aa602d4251d6353d6359c0bd94831a91f2e7ed56fa",
+  "VERIFICATION.md": "bfe039d69a243ecbe181e88338f5f8477a96c52d4748f73e028ae1f85f125ec0",
+  "capture_hbvcam.py": "4bcc90a7b590960fe98d01ae5cf12ee161a07b65d352a576eb92064205433d7e",
+  "evidence/compile_640x480.log": "830e42a32451f2677abcb31de2dc62e0092b210ecb2d0fc5a95924966097189c",
+  "evidence/hardware_summary.json": "78a2ca5e311c1ed789eb190fb52917b03432bc454a4c2aafab024085c49a06c3",
+  "evidence/hbvcam_160x120.jpg": "3baa7b57b7fe088c97fddf76124febcf5fe420b0a324890868c14d9460853c4a",
+  "evidence/run_after_snapshot.log": "9c56b9f57a5b9b25648bea37ab1b1de5bc54461155c05d718dfb3a5df7f007a7",
+  "evidence/run_boot_160x120.log": "360c6618953beaac4436ba98022e9809b7ff4f3883933b23d8b89ff10c13180d",
+  "evidence/run_boot_640x480.log": "ee55ca4c1d21cb174858dda413ae41c0d322659de01083abead531f700ead5b1",
+  "evidence/snapshot_160x120.log": "711e87dcf0a744d0753815510fefc66f55d56f4cb5cce5079c66dd30f94ca144",
+  "evidence/snapshot_640x480.log": "3007d168112a2d29e5b01b0084f9719f6a0ee1a89c6ff6e0b7b6a297f62e68c2",
+  "evidence/upload_640x480.log": "b4b43d76b51b309738af3e1671857f6d43a8f1b4504542898da1bcfa741f8b99",
+  "evidence/uvc_advertised_modes.csv": "955877f54b9f6a74a4381327fa9ffa811170b30e7fe2423d06f8763b3c16b164",
+  "hbvcam_640x480.jpg": "56a4b2db300fcb3c5e7b61267914d7a6997428a251ec6686a3c0615b2a1c5ed1",
+  "src/UsbCamera.cpp": "270aad0350e6231774eda0055f39a753ee428be6b98da98d7ffa56ecd10b7758",
+  "src/UsbCamera.h": "9babeec09b74d9c56f83cba6dc22861727fac2733c5a0d1720423327cf4dfe5d"
+}

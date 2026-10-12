@@ -1,0 +1,98 @@
+{
+  "verified_at": "2026-10-12 18:49:20 +0800",
+  "checks": {
+    "page_identity_http_200": true,
+    "stop_sequence_stable_4_seconds": true,
+    "stream_while_stopped": 409,
+    "unknown_route": 404,
+    "restart_receives_real_frames": true,
+    "cross_origin_control_rejected": 403,
+    "mjpeg_five_frames_valid_and_changing": true,
+    "jpeg_download_valid": true,
+    "missing_serial_disconnected_no_fake_frames": true
+  },
+  "frames": [
+    {
+      "bytes": 14704,
+      "dimensions": [
+        640,
+        480
+      ],
+      "sha256": "89ba71fcb2001f013ee1c11e2d5bdad0e56ef93a82fd43633f96bd8c21e12b34",
+      "received_at": 1791802166.667455
+    },
+    {
+      "bytes": 14560,
+      "dimensions": [
+        640,
+        480
+      ],
+      "sha256": "00ebaccf1badffd3034831be30b6a59ab44521ae01d8d69fd40d293c77e58903",
+      "received_at": 1791802168.60227
+    },
+    {
+      "bytes": 14340,
+      "dimensions": [
+        640,
+        480
+      ],
+      "sha256": "061377ae067b48894c6daafcb7d851d2fad2c7db03905df31f0521dcfc493208",
+      "received_at": 1791802170.50586
+    },
+    {
+      "bytes": 14248,
+      "dimensions": [
+        640,
+        480
+      ],
+      "sha256": "3b3f34440bf53c8a5be213c5ba7a2cb7e740b8bf40de7e483f4cc0349a6f4d7d",
+      "received_at": 1791802172.403815
+    },
+    {
+      "bytes": 14418,
+      "dimensions": [
+        640,
+        480
+      ],
+      "sha256": "bd4739c0aa67883d89542db5bda46251c9f2a6e2ca733da0dd320e0270e0b2b6",
+      "received_at": 1791802174.326302
+    }
+  ],
+  "live_status": {
+    "state": "live",
+    "running": true,
+    "connected": true,
+    "message": "Receiving real frames from HBVCAM through ESP32-P4.",
+    "serialPort": "/dev/cu.usbmodem5B790679131",
+    "sequence": 25,
+    "sessionFrames": 5,
+    "width": 640,
+    "height": 480,
+    "bytes": 14418,
+    "lastFrameAt": 1791802174325,
+    "frameAgeMs": 10,
+    "fps": 0.5125576627370579,
+    "sessionStarted": 1791802164640,
+    "transport": "MJPEG over HTTP",
+    "lastLog": "[READY] MJPEG 640x480 nominalFPS=30.00"
+  },
+  "missing_serial_status": {
+    "state": "disconnected",
+    "running": false,
+    "connected": false,
+    "message": "[Errno 2] No such file or directory: '/dev/bonus-test-unavailable'",
+    "serialPort": "",
+    "sequence": 0,
+    "sessionFrames": 0,
+    "width": null,
+    "height": null,
+    "bytes": null,
+    "lastFrameAt": null,
+    "frameAgeMs": null,
+    "fps": 0,
+    "sessionStarted": 1791802174555,
+    "transport": "MJPEG over HTTP",
+    "lastLog": ""
+  },
+  "passed": true
+}

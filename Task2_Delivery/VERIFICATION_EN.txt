@@ -1,0 +1,40 @@
+ACTUAL HARDWARE VERIFICATION
+Date: 12 October 2026
+Camera label from user: HBVCAM F2170HD V66
+USB VID:PID: 1E45:0209 (does not by itself prove all model specifications)
+
+Final 640 x 480 MJPEG capture:
+- 25 second boot and stream observation, including startup and enumeration.
+- 19 frame reports, total frame numbers 30 through 582.
+- Reported rates 29.1 to 30.0 fps; 19 distinct sampled frame hashes.
+- In the observed records USB errors=0, drops=0, overflows=0.
+- JPEG saved: 16712 bytes, internal dimensions 640 x 480.
+- Byte count, SOI/EOI markers, protocol trailer and internal SOF checked.
+- JPEG actually opened and visually inspected; original orientation retained.
+- JPEG SHA256:
+  56a4b2db300fcb3c5e7b61267914d7a6997428a251ec6686a3c0615b2a1c5ed1
+
+After snapshot:
+- 12 second observation, 12 frame reports, totals 3174 through 3511.
+- 30.0 fps; USB errors, drops and overflows remained zero.
+- Capture pauses during UART snapshot transfer; continuous 30 fps is not
+  claimed during that transfer.
+
+Additional evidence:
+- Initial 160 x 120 MJPEG capture also worked and produced a saved JPEG.
+- 22 descriptor modes: 11 MJPEG and 11 YUY2.
+- 1920 x 1080 was advertised only; no 1080p capture was tested.
+- Application/bootloader hashes and measured counters are retained in
+  HBVCAM_USB_PartB/evidence/hardware_summary.json.
+
+Unresolved startup issue:
+TTL RTS reset produced bootloader Load access fault, PC 0x4ffb226c,
+before setup(). A subsequent watchdog reboot recovered and the application ran.
+This also appeared in earlier board-only tests. The cause is unresolved.
+camera_capture_verified=true; startup_stability_verified=false.
+
+Unverified:
+USB cold power cycle, hot unplug/replug, long-duration load, 1080p capture,
+YUY2 capture/decode, network streaming and display output.
+OV2710 sensor ID/capture and IMX219 capture were not verified.
+Native Windows Word and the Python helper on Windows were not tested.

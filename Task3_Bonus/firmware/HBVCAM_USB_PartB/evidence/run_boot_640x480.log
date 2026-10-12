@@ -1,0 +1,725 @@
+ESP-ROM:esp32p4-eco7-20260109
+Build:Jan  9 2026
+rst:0x1 (POWERON),boot:0x20f (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:2
+load:0x4ffb60d0,len:0x107c
+load:0x4ffac2c0,len:0xd94
+load:0x4ffaefc0,len:0x3528
+entry 0x4ffac2c0
+Guru Meditation Error: Core 0 panic'ed (Load access fault)
+Core 0 register dump:
+PC      : 0x4ffb226c  RA      : 0x4ffb2264  SP      : 0x4ffbcc90  GP      : 0x00000000
+TP      : 0x00000000  T0      : 0x4fc0a728  T1      : 0x4fc00628  T2      : 0x4ffbce28
+S0      : 0x520e60bc  S1      : 0x4ffbccd8  A0      : 0x00000067  A1      : 0x00000000
+A2      : 0xff000000  A3      : 0x5cc199c0  A4      : 0x50124000  A5      : 0x00000004
+A6      : 0x500e6000  A7      : 0xffffe01f  S2      : 0x00000190  S3      : 0x4ffb6000
+S4      : 0x0000ffff  S5      : 0x4fc1ddb4  S6      : 0x00007368  S7      : 0x4ffc0000
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000
+T3      : 0x00000000  T4      : 0x02e7d7b3  T5      : 0x00158713  T6      : 0x02e7d7b3
+MSTATUS : 0x00001881  MCAUSE  : 0x38000005  MTVAL   : 0x520e60bc  INTLEVEL: 0x4ffb2264
+
+
+Stack memory:
+4ffbcc90: 0x0000012e 0x00000000 0x00000000 0x4ffc0000 0x0000012e 0x00000028 0x00000064 0x4ffacefe
+4ffbccb0: 0xe33be65c 0xf457a5e9 0x00046428 0x55e32400 0x00000000 0x00000028 0x00000001 0x00000001
+4ffbccd0: 0x00000000 0x00000028 0x00000001 0x00000190 0x00000004 0x00000000 0x00000000 0x00000064
+4ffbccf0: 0x00000000 0x00000029 0x0000012e 0x4ffac5a6 0xffffffff 0x4fc1ddb4 0x00046428 0x55e32400
+4ffbcd10: 0x00000000 0x00000029 0x0000012e 0x4ffac46e 0xffffffff 0x00000010 0x00000000 0x4ffac2d4
+4ffbcd30: 0xc30309e2 0x6c9b740c 0x00000000 0x00000000 0x61666634 0x30633263 0x00000000 0x00000000
+4ffbcd50: 0x00000000 0x00000000 0x00000000 0x00000000 0x0000000a 0x00000020 0x4fc1e000 0x00000000
+4ffbcd70: 0x00000000 0x00000000 0x00000000 0x4ffc0000 0x00007368 0x4fc1ddb4 0x0000ffff 0x4ffc0000
+4ffbcd90: 0x00000000 0x00000029 0x00000000 0x4fc033e6 0x00007368 0x4fc1ddb4 0x0000ffff 0x4ffc0000
+4ffbcdb0: 0x4ffbce74 0x4ffbce30 0x4ffc0000 0x4ffbcdd4 0x00000000 0x00000000 0x00000000 0x4fc055ba
+4ffbcdd0: 0x00000000 0x4ffac2c0 0x00000010 0x00000000 0x3ff10000 0x00000010 0x00000020 0x4fc055be
+4ffbcdf0: 0x3ceb01c7 0x13883acb 0x89d7001c 0x75a3ec0d 0x00000000 0x00010000 0x400203e9 0x4ffac2c0
+4ffbce10: 0x4ffaefc0 0x00003528 0x000000ee 0x00000012 0x00ffff00 0x01000000 0x40007370 0x7533885e
+4ffbce30: 0x556e0d56 0xccbe5251 0x5e3c2fcf 0x0d4451a3 0x5805554d 0x543d1061 0x80b02c7e 0xbf7b34e2
+4ffbce50: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4ffbce70: 0x4ffbcf90 0x00000101 0x00000002 0x556e0d56 0xccbe5251 0x5e3c2fcf 0x0d4451a3 0x5805554d
+4ffbce90: 0x543d1061 0x80b02c7e 0xbf7b34e2 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4ffbceb0: 0x00000000 0x00000000 0x00000000 0x02e7d7b3 0x00180713 0x02e7d7b3 0x00158713 0x02e7d7b3
+4ffbced0: 0x02a7d533 0x67b78082 0x5be83ff0 0x89058105 0x00008082 0x00000000 0x29000000 0x00000080
+4ffbcef0: 0x00000000 0x00000000 0x809b0200 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4ffbcf10: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4ffbcf30: 0x00000000 0x00000000 0x00000000 0x00029c00 0x00000000 0x00000000 0x00000000 0xec1f5729
+4ffbcf50: 0x00000000 0x4ffbfff8 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4ffbcf70: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x4ffbfff8 0x4ffbf008 0x4fc02b7c
+4ffbcf90: 0x884551c1 0x4718039d 0x4fc1d6a8 0x4fc1d440 0x600f2fb8 0x885f6b91 0x7ec5d66f 0x4ffbcfc0
+4ffbcfb0: 0x00000000 0x00000000 0x00000000 0x00000000 0x56ce8ab4 0x012ff213 0x094c80fa 0x38a5b92e
+4ffbcfd0: 0x56201900 0xd4b5189a 0x2e2a9f6b 0x8e428238 0x6fc551e9 0x51deebb9 0xb7017543 0x4d536922
+4ffbcff0: 0x7d82e92e 0x03ef428a 0x30a558b9 0x8e56f487 0x542c7fb2 0x391f3cbb 0xecffec7c 0xc677ebb7
+4ffbd010: 0x3e3a95c0 0xd6306a02 0xcb3d739f 0xc8087e75 0xf3434add 0xaa871796 0xd958cc52 0xe1f14310
+4ffbd030: 0x96db83c2 0x0cb08e81 0xd00d5785 0x351847e4 0x6a3d1c54 0xd55ed669 0xe73efbbb 0xb3392df9
+4ffbd050: 0x36e2fa1c 0xe1a4bf5b 0xcbbdb7be 0x6d59ada4 0xb9026ee4 0x4817038a 0x08fbfe9d 0xe4131130
+4ffbd070: 0xa97389c6 0x0e6a211a 0xf065c400 0x54f57622 0xaff61ddc 0x809ab3d4 0xf6c615db 0x24b0faa4
+
+ESP-ROM:esp32p4-eco7-20260109
+Build:Jan  9 2026
+rst:0x7 (HP_SYS_HP_WDT_RESET),boot:0x20f (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:2
+load:0x4ffb60d0,len:0x107c
+load:0x4ffac2c0,len:0xd94
+load:0x4ffaefc0,len:0x3528
+entry 0x4ffac2c0
+[     4][I][esp32-hal-psram.c:106] psramAddToHeap(): PSRAM added to the heap.
+
+=== HBVCAM USB / ESP32-P4 / Arduino ===
+Chip=ESP32-P4 rev=302 PSRAM=33554432
+[USB_HOST] install=ESP_OK native=HS
+[UVC_DRIVER] install=ESP_OK
+[WAIT] Connect UVC camera to USB-A. Command j=JPEG snapshot via Mac helper.
+[UVC_CONNECTED] address=1 VID=0x1E45 PID=0x0209
+[UVC_MODE] index=0 format=1 width=1920 height=1080 defaultInterval=333333
+[UVC_MODE] index=1 format=1 width=1280 height=1024 defaultInterval=333333
+[UVC_MODE] index=2 format=1 width=1280 height=800 defaultInterval=333333
+[UVC_MODE] index=3 format=1 width=1280 height=720 defaultInterval=333333
+[UVC_MODE] index=4 format=1 width=1024 height=768 defaultInterval=333333
+[UVC_MODE] index=5 format=1 width=800 height=600 defaultInterval=333333
+[UVC_MODE] index=6 format=1 width=160 height=120 defaultInterval=333333
+[UVC_MODE] index=7 format=1 width=320 height=240 defaultInterval=333333
+[UVC_MODE] index=8 format=1 width=352 height=288 defaultInterval=333333
+[UVC_MODE] index=9 format=1 width=640 height=360 defaultInterval=333333
+[UVC_MODE] index=10 format=1 width=640 height=480 defaultInterval=333333
+[UVC_MODE] index=11 format=2 width=1920 height=1080 defaultInterval=2000000
+[UVC_MODE] index=12 format=2 width=1280 height=1024 defaultInterval=2000000
+[UVC_MODE] index=13 format=2 width=1280 height=800 defaultInterval=1000000
+[UVC_MODE] index=14 format=2 width=1280 height=720 defaultInterval=1000000
+[UVC_MODE] index=15 format=2 width=1024 height=768 defaultInterval=1000000
+[UVC_MODE] index=16 format=2 width=800 height=600 defaultInterval=1000000
+[UVC_MODE] index=17 format=2 width=160 height=120 defaultInterval=333333
+[UVC_MODE] index=18 format=2 width=320 height=240 defaultInterval=333333
+[UVC_MODE] index=19 format=2 width=352 height=288 defaultInterval=333333
+[UVC_MODE] index=20 format=2 width=640 height=360 defaultInterval=333333
+[UVC_MODE] index=21 format=2 width=640 height=480 defaultInterval=333333
+[UVC_OPEN] ESP_OK
+*** Device descriptor ***
+bLength 18
+bDescriptorType 1
+bcdUSB 2.00
+bDeviceClass 0xef
+bDeviceSubClass 0x2
+bDeviceProtocol 0x1
+bMaxPacketSize0 64
+idVendor 0x1e45
+idProduct 0x209
+bcdDevice 0.00
+iManufacturer 3
+iProduct 1
+iSerialNumber 2
+bNumConfigurations 1
+*** Configuration descriptor ***
+bLength 9
+bDescriptorType 2
+wTotalLength 1398
+bNumInterfaces 2
+bConfigurationValue 1
+iConfiguration 4
+bmAttributes 0x80
+bMaxPower 500mA
+*** Interface Association Descriptor ***
+bLength 8
+bDescriptorType 11
+bFirstInterface 0
+bInterfaceCount 2
+bFunctionClass 0xe
+bFunctionSubClass 0x3
+bFunctionProtocol 0x0
+iFunction 5
+	*** Interface descriptor ***
+	bLength 9
+	bDescriptorType 4
+	bInterfaceNumber 0
+	bAlternateSetting 0
+	bNumEndpoints 1
+	bInterfaceClass 0xe
+	bInterfaceSubClass 0x1
+	bInterfaceProtocol 0x0
+	iInterface 5
+	*** Class-specific VC Interface Descriptor ***
+	bLength 13
+	bDescriptorType 0x24
+	bDescriptorSubType 0x01
+	bcdUVC 0100
+	wTotalLength 78
+	dwClockFrequency 15000000
+	bInCollection 1
+	baInterfaceNr[0] 1
+	*** Input Terminal Descriptor (Camera) ***
+	bLength 18
+	bDescriptorType 0x24
+	bDescriptorSubType 0x02
+	bTerminalID 0x1
+	wTerminalType 0x201
+	bAssocTerminal 0
+	iTerminal 0
+	wObjectiveFocalLengthMin 0
+	wObjectiveFocalLengthMax 0
+	wOcularFocalLength 0
+	bControlSize 3
+	bmControls 0x2E 0x2A 0x2
+	*** Processing Unit Descriptor ***
+	bLength 11
+	bDescriptorType 0x24
+	bDescriptorSubType 0x05
+	bUnitID 2
+	bSourceID 1
+	wMaxMultiplier 0
+	bControlSize 2
+	bmControls 0x7F 0x15 0x0
+	iProcessing 9
+	bmVideoStandards 0x24
+	*** Output Terminal Descriptor ***
+	bLength 9
+	bDescriptorType 0x24
+	bDescriptorSubType 0x03
+	bTerminalID 3
+	wTerminalType 0x101
+	bAssocTerminal 0
+	bSourceID 4
+	iTerminal 0
+	*** Extension Unit Descriptor unsupported, skipping... ***
+		*** Endpoint descriptor ***
+		bLength 7
+		bDescriptorType 5
+		bEndpointAddress 0x83	EP 3 IN
+		bmAttributes 0x3	INT
+		wMaxPacketSize 32
+		bInterval 6
+		*** Class-specific Interrupt Endpoint Descriptor ***
+		bLength 5
+		bDescriptorType 0x25
+		bDescriptorSubType 3
+		wMaxTransferSize 32
+	*** Interface descriptor ***
+	bLength 9
+	bDescriptorType 4
+	bInterfaceNumber 1
+	bAlternateSetting 0
+	bNumEndpoints 0
+	bInterfaceClass 0xe
+	bInterfaceSubClass 0x2
+	bInterfaceProtocol 0x0
+	iInterface 0
+	*** Class-specific VC Interface Descriptor ***
+	bLength 15
+	bDescriptorType 0x24
+	bDescriptorSubType 0x01
+	bcdUVC 8902
+	wTotalLength 33028
+	dwClockFrequency 16909056
+	bInCollection 0
+	*** Extension Unit Descriptor unsupported, skipping... ***
+	*** VS Frame Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x07
+	bFrameIndex 1
+	bmCapabilities 0x0
+	wWidth 1920
+	wHeight 1080
+	dwMinBitRate 165888000
+	dwMaxBitRate 995328000
+	dwMaxVideoFrameBufSize 4147200
+	dwDefaultFrameInterval 333333
+	bFrameIntervalType 6
+	FrameInterval[0] 333333
+	FrameInterval[1] 400000
+	FrameInterval[2] 500000
+	FrameInterval[3] 666666
+	FrameInterval[4] 1000000
+	FrameInterval[5] 2000000
+	*** VS Frame Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x07
+	bFrameIndex 2
+	bmCapabilities 0x0
+	wWidth 1280
+	wHeight 1024
+	dwMinBitRate 104857600
+	dwMaxBitRate 629145600
+	dwMaxVideoFrameBufSize 2621440
+	dwDefaultFrameInterval 333333
+	bFrameIntervalType 6
+	FrameInterval[0] 333333
+	FrameInterval[1] 400000
+	FrameInterval[2] 500000
+	FrameInterval[3] 666666
+	FrameInterval[4] 1000000
+	FrameInterval[5] 2000000
+	*** VS Frame Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x07
+	bFrameIndex 3
+	bmCapabilities 0x0
+	wWidth 1280
+	wHeight 800
+	dwMinBitRate 81920000
+	dwMaxBitRate 491520000
+	dwMaxVideoFrameBufSize 2048000
+	dwDefaultFrameInterval 333333
+	bFrameIntervalType 6
+	FrameInterval[0] 333333
+	FrameInterval[1] 400000
+	FrameInterval[2] 500000
+	FrameInterval[3] 666666
+	FrameInterval[4] 1000000
+	FrameInterval[5] 2000000
+	*** VS Frame Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x07
+	bFrameIndex 4
+	bmCapabilities 0x0
+	wWidth 1280
+	wHeight 720
+	dwMinBitRate 73728000
+	dwMaxBitRate 442368000
+	dwMaxVideoFrameBufSize 1843200
+	dwDefaultFrameInterval 333333
+	bFrameIntervalType 6
+	FrameInterval[0] 333333
+	FrameInterval[1] 400000
+	FrameInterval[2] 500000
+	FrameInterval[3] 666666
+	FrameInterval[4] 1000000
+	FrameInterval[5] 2000000
+	*** VS Frame Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x07
+	bFrameIndex 5
+	bmCapabilities 0x0
+	wWidth 1024
+	wHeight 768
+	dwMinBitRate 62914560
+	dwMaxBitRate 377487360
+	dwMaxVideoFrameBufSize 1572864
+	dwDefaultFrameInterval 333333
+	bFrameIntervalType 6
+	FrameInterval[0] 333333
+	FrameInterval[1] 400000
+	FrameInterval[2] 500000
+	FrameInterval[3] 666666
+	FrameInterval[4] 1000000
+	FrameInterval[5] 2000000
+	*** VS Frame Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x07
+	bFrameIndex 6
+	bmCapabilities 0x0
+	wWidth 800
+	wHeight 600
+	dwMinBitRate 38400000
+	dwMaxBitRate 230400000
+	dwMaxVideoFrameBufSize 960000
+	dwDefaultFrameInterval 333333
+	bFrameIntervalType 6
+	FrameInterval[0] 333333
+	FrameInterval[1] 400000
+	FrameInterval[2] 500000
+	FrameInterval[3] 666666
+	FrameInterval[4] 1000000
+	FrameInterval[5] 2000000
+	*** VS Frame Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x07
+	bFrameIndex 7
+	bmCapabilities 0x0
+	wWidth 160
+	wHeight 120
+	dwMinBitRate 1536000
+	dwMaxBitRate 9216000
+	dwMaxVideoFrameBufSize 38400
+	dwDefaultFrameInterval 333333
+	bFrameIntervalType 6
+	FrameInterval[0] 333333
+	FrameInterval[1] 400000
+	FrameInterval[2] 500000
+	FrameInterval[3] 666666
+	FrameInterval[4] 1000000
+	FrameInterval[5] 2000000
+	*** VS Frame Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x07
+	bFrameIndex 8
+	bmCapabilities 0x0
+	wWidth 320
+	wHeight 240
+	dwMinBitRate 6144000
+	dwMaxBitRate 36864000
+	dwMaxVideoFrameBufSize 153600
+	dwDefaultFrameInterval 333333
+	bFrameIntervalType 6
+	FrameInterval[0] 333333
+	FrameInterval[1] 400000
+	FrameInterval[2] 500000
+	FrameInterval[3] 666666
+	FrameInterval[4] 1000000
+	FrameInterval[5] 2000000
+	*** VS Frame Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x07
+	bFrameIndex 9
+	bmCapabilities 0x0
+	wWidth 352
+	wHeight 288
+	dwMinBitRate 8110080
+	dwMaxBitRate 48660480
+	dwMaxVideoFrameBufSize 202752
+	dwDefaultFrameInterval 333333
+	bFrameIntervalType 6
+	FrameInterval[0] 333333
+	FrameInterval[1] 400000
+	FrameInterval[2] 500000
+	FrameInterval[3] 666666
+	FrameInterval[4] 1000000
+	FrameInterval[5] 2000000
+	*** VS Frame Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x07
+	bFrameIndex 10
+	bmCapabilities 0x0
+	wWidth 640
+	wHeight 360
+	dwMinBitRate 18432000
+	dwMaxBitRate 110592000
+	dwMaxVideoFrameBufSize 460800
+	dwDefaultFrameInterval 333333
+	bFrameIntervalType 6
+	FrameInterval[0] 333333
+	FrameInterval[1] 400000
+	FrameInterval[2] 500000
+	FrameInterval[3] 666666
+	FrameInterval[4] 1000000
+	FrameInterval[5] 2000000
+	*** VS Frame Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x07
+	bFrameIndex 11
+	bmCapabilities 0x0
+	wWidth 640
+	wHeight 480
+	dwMinBitRate 24576000
+	dwMaxBitRate 147456000
+	dwMaxVideoFrameBufSize 614400
+	dwDefaultFrameInterval 333333
+	bFrameIntervalType 6
+	FrameInterval[0] 333333
+	FrameInterval[1] 400000
+	FrameInterval[2] 500000
+	FrameInterval[3] 666666
+	FrameInterval[4] 1000000
+	FrameInterval[5] 2000000
+	*** Output Terminal Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x03
+	bTerminalID 0
+	wTerminalType 0x800B
+	bAssocTerminal 7
+	bSourceID 56
+	iTerminal 4
+	*** VS Color Format Descriptor ***
+	bLength 6
+	bDescriptorType 0x24
+	bDescriptorSubType 0x0D
+	bColorPrimaries 0x1
+	bTransferCharacteristics 1
+	bMatrixCoefficients 0x4
+	*** Selector Unit Descriptor ***
+	bLength 27
+	bDescriptorType 0x24
+	bDescriptorSubType 0x04
+	bUnitID 2
+	bNrInPins 11
+	baSourceID1 89
+	baSourceID2 85
+	iSelector 89
+	*** Processing Unit Descriptor ***
+	bLength 30
+	bDescriptorType 0x24
+	bDescriptorSubType 0x05
+	bUnitID 1
+	bSourceID 0
+	wMaxMultiplier 1920
+	bControlSize 56
+	bmControls 0x4 0x0 0x40
+	iProcessing 227
+	bmVideoStandards 0x9
+	*** Processing Unit Descriptor ***
+	bLength 30
+	bDescriptorType 0x24
+	bDescriptorSubType 0x05
+	bUnitID 2
+	bSourceID 0
+	wMaxMultiplier 1280
+	bControlSize 0
+	bmControls 0x4 0x0 0x0
+	iProcessing 64
+	bmVideoStandards 0x6
+	*** Processing Unit Descriptor ***
+	bLength 34
+	bDescriptorType 0x24
+	bDescriptorSubType 0x05
+	bUnitID 3
+	bSourceID 0
+	wMaxMultiplier 1280
+	bControlSize 32
+	bmControls 0x3 0x0 0x0
+	iProcessing 226
+	bmVideoStandards 0x4
+	*** Processing Unit Descriptor ***
+	bLength 34
+	bDescriptorType 0x24
+	bDescriptorSubType 0x05
+	bUnitID 4
+	bSourceID 0
+	wMaxMultiplier 1280
+	bControlSize 208
+	bmControls 0x2 0x0 0x0
+	iProcessing 101
+	bmVideoStandards 0x4
+	*** Processing Unit Descriptor ***
+	bLength 34
+	bDescriptorType 0x24
+	bDescriptorSubType 0x05
+	bUnitID 5
+	bSourceID 0
+	wMaxMultiplier 1024
+	bControlSize 0
+	bmControls 0x3 0x0 0x0
+	iProcessing 192
+	bmVideoStandards 0x3
+	*** Processing Unit Descriptor ***
+	bLength 34
+	bDescriptorType 0x24
+	bDescriptorSubType 0x05
+	bUnitID 6
+	bSourceID 0
+	wMaxMultiplier 800
+	bControlSize 88
+	bmControls 0x2 0x0 0xF0
+	iProcessing 73
+	bmVideoStandards 0x2
+	*** Processing Unit Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x05
+	bUnitID 7
+	bSourceID 0
+	wMaxMultiplier 160
+	bControlSize 120
+	bmControls 0x0 0x0 0x70
+	iProcessing 23
+	bmVideoStandards 0x0
+	*** Processing Unit Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x05
+	bUnitID 8
+	bSourceID 0
+	wMaxMultiplier 320
+	bControlSize 240
+	bmControls 0x0 0x0 0xC0
+	iProcessing 93
+	bmVideoStandards 0x0
+	*** Processing Unit Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x05
+	bUnitID 9
+	bSourceID 0
+	wMaxMultiplier 352
+	bControlSize 32
+	bmControls 0x1 0x0 0xC0
+	iProcessing 123
+	bmVideoStandards 0x0
+	*** Processing Unit Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x05
+	bUnitID 10
+	bSourceID 0
+	wMaxMultiplier 640
+	bControlSize 104
+	bmControls 0x1 0x0 0x40
+	iProcessing 25
+	bmVideoStandards 0x1
+	*** Processing Unit Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x05
+	bUnitID 11
+	bSourceID 0
+	wMaxMultiplier 640
+	bControlSize 224
+	bmControls 0x1 0x0 0x0
+	iProcessing 119
+	bmVideoStandards 0x1
+	*** Output Terminal Descriptor ***
+	bLength 50
+	bDescriptorType 0x24
+	bDescriptorSubType 0x03
+	bTerminalID 0
+	wTerminalType 0x800B
+	bAssocTerminal 7
+	bSourceID 56
+	iTerminal 4
+	*** VS Color Format Descriptor ***
+	bLength 6
+	bDescriptorType 0x24
+	bDescriptorSubType 0x0D
+	bColorPrimaries 0x1
+	bTransferCharacteristics 1
+	bMatrixCoefficients 0x4
+	*** Interface descriptor ***
+	bLength 9
+	bDescriptorType 4
+	bInterfaceNumber 1
+	bAlternateSetting 1
+	bNumEndpoints 1
+	bInterfaceClass 0xe
+	bInterfaceSubClass 0x2
+	bInterfaceProtocol 0x0
+	iInterface 0
+		*** Endpoint descriptor ***
+		bLength 7
+		bDescriptorType 5
+		bEndpointAddress 0x81	EP 1 IN
+		bmAttributes 0x5	ISOC
+		wMaxPacketSize 128
+		bInterval 1
+	*** Interface descriptor ***
+	bLength 9
+	bDescriptorType 4
+	bInterfaceNumber 1
+	bAlternateSetting 2
+	bNumEndpoints 1
+	bInterfaceClass 0xe
+	bInterfaceSubClass 0x2
+	bInterfaceProtocol 0x0
+	iInterface 0
+		*** Endpoint descriptor ***
+		bLength 7
+		bDescriptorType 5
+		bEndpointAddress 0x81	EP 1 IN
+		bmAttributes 0x5	ISOC
+		wMaxPacketSize 512
+		bInterval 1
+	*** Interface descriptor ***
+	bLength 9
+	bDescriptorType 4
+	bInterfaceNumber 1
+	bAlternateSetting 3
+	bNumEndpoints 1
+	bInterfaceClass 0xe
+	bInterfaceSubClass 0x2
+	bInterfaceProtocol 0x0
+	iInterface 0
+		*** Endpoint descriptor ***
+		bLength 7
+		bDescriptorType 5
+		bEndpointAddress 0x81	EP 1 IN
+		bmAttributes 0x5	ISOC
+		wMaxPacketSize 1024
+		bInterval 1
+	*** Interface descriptor ***
+	bLength 9
+	bDescriptorType 4
+	bInterfaceNumber 1
+	bAlternateSetting 4
+	bNumEndpoints 1
+	bInterfaceClass 0xe
+	bInterfaceSubClass 0x2
+	bInterfaceProtocol 0x0
+	iInterface 0
+		*** Endpoint descriptor ***
+		bLength 7
+		bDescriptorType 5
+		bEndpointAddress 0x81	EP 1 IN
+		bmAttributes 0x5	ISOC
+		wMaxPacketSize 768
+		wMaxPacketSize (with additional transactions in microframe) 1536
+		bInterval 1
+	*** Interface descriptor ***
+	bLength 9
+	bDescriptorType 4
+	bInterfaceNumber 1
+	bAlternateSetting 5
+	bNumEndpoints 1
+	bInterfaceClass 0xe
+	bInterfaceSubClass 0x2
+	bInterfaceProtocol 0x0
+	iInterface 0
+		*** Endpoint descriptor ***
+		bLength 7
+		bDescriptorType 5
+		bEndpointAddress 0x81	EP 1 IN
+		bmAttributes 0x5	ISOC
+		wMaxPacketSize 1024
+		wMaxPacketSize (with additional transactions in microframe) 2048
+		bInterval 1
+	*** Interface descriptor ***
+	bLength 9
+	bDescriptorType 4
+	bInterfaceNumber 1
+	bAlternateSetting 6
+	bNumEndpoints 1
+	bInterfaceClass 0xe
+	bInterfaceSubClass 0x2
+	bInterfaceProtocol 0x0
+	iInterface 0
+		*** Endpoint descriptor ***
+		bLength 7
+		bDescriptorType 5
+		bEndpointAddress 0x81	EP 1 IN
+		bmAttributes 0x5	ISOC
+		wMaxPacketSize 896
+		wMaxPacketSize (with additional transactions in microframe) 2688
+		bInterval 1
+	*** Interface descriptor ***
+	bLength 9
+	bDescriptorType 4
+	bInterfaceNumber 1
+	bAlternateSetting 7
+	bNumEndpoints 1
+	bInterfaceClass 0xe
+	bInterfaceSubClass 0x2
+	bInterfaceProtocol 0x0
+	iInterface 0
+		*** Endpoint descriptor ***
+		bLength 7
+		bDescriptorType 5
+		bEndpointAddress 0x81	EP 1 IN
+		bmAttributes 0x5	ISOC
+		wMaxPacketSize 1024
+		wMaxPacketSize (with additional transactions in microframe) 3072
+		bInterval 1
+[READY] MJPEG 640x480 nominalFPS=30.00
+[FRAME] total=30 fps=29.1 size=17046 width=640 height=480 hash=13CB6E9C usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=60 fps=30.0 size=18414 width=640 height=480 hash=56D09E33 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=91 fps=30.0 size=17992 width=640 height=480 hash=0D0BE96D usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=122 fps=30.0 size=17368 width=640 height=480 hash=3201C848 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=153 fps=30.0 size=17604 width=640 height=480 hash=FF1B99F3 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=184 fps=30.0 size=17748 width=640 height=480 hash=8F1FB942 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=214 fps=30.0 size=17704 width=640 height=480 hash=DC79BC57 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=244 fps=30.0 size=14366 width=640 height=480 hash=58699639 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=275 fps=30.0 size=15030 width=640 height=480 hash=F206528E usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=306 fps=30.0 size=14620 width=640 height=480 hash=42E235DE usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=337 fps=30.0 size=15384 width=640 height=480 hash=6759671E usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=368 fps=30.0 size=15374 width=640 height=480 hash=FEE39D13 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=398 fps=30.0 size=14774 width=640 height=480 hash=FE8344C3 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=428 fps=30.0 size=14324 width=640 height=480 hash=D118F97B usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=459 fps=30.0 size=14868 width=640 height=480 hash=036D9213 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=490 fps=30.0 size=14754 width=640 height=480 hash=C31C46F5 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=521 fps=30.0 size=14326 width=640 height=480 hash=3F092475 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=552 fps=30.0 size=14972 width=640 height=480 hash=929A2A02 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+[FRAME] total=582 fps=30.0 size=18466 width=640 height=480 hash=7C14E855 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964

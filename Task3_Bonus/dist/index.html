@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A local live camera feed from HBVCAM and ESP32-P4.">
+  <title>Camera Stream · ESP32-P4</title><link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar"><a class="brand" href="/" aria-label="Camera Stream home"><span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h4l2-3h4l2 3h4v13H4z"/><circle cx="12" cy="13" r="4"/></svg></span>Camera Stream</a><span class="local-tag"><span></span> LOCAL SESSION</span></header>
+    <main>
+      <div class="intro"><div><p class="eyebrow">ESP32-P4 / USB CAMERA</p><h1>A window into your camera.</h1><p class="subtitle">Your camera feed, right here in the browser.</p></div><div class="connection" id="connection" role="status" aria-live="polite"><span class="dot"></span><span id="connection-text">Not connected</span></div></div>
+      <div class="workspace">
+        <section class="viewer" aria-label="Camera preview">
+          <div class="viewer-top"><div class="viewer-label"><span class="feed-dot" id="feed-dot"></span>CAMERA 01</div><span id="feed-tag">STANDBY</span></div>
+          <div class="stage" id="stage"><img id="feed" alt="Live image from the HBVCAM camera connected to ESP32-P4" hidden>
+            <div class="empty" id="empty"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="13" width="34" height="27" rx="5"/><path d="m16 13 3-6h10l3 6"/><circle cx="24" cy="26" r="8"/></svg><h2>Your camera is ready to connect</h2><p>Press Start stream to bring the picture in.</p></div>
+            <div class="stage-badge" id="stage-badge" hidden>Paused · last received frame</div>
+          </div>
+          <div class="viewer-bottom"><span id="frame-info">Waiting for the first frame</span><span id="updated">—</span></div>
+        </section>
+        <aside class="panel" aria-label="Stream controls">
+          <div class="panel-heading"><span class="eyebrow">STREAM CONTROL</span><h2>Bring it live.</h2><p>A simple view from your connected camera.</p></div>
+          <button class="button primary" id="start"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 3 11 7-11 7z"/></svg>Start stream</button>
+          <button class="button secondary" id="stop" disabled><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="4" y="4" width="12" height="12" rx="1"/></svg>Stop stream</button>
+          <p class="message" id="message" role="status">Connect your camera and start when you're ready.</p>
+          <dl class="details"><div><dt>Camera</dt><dd>HBVCAM USB</dd></div><div><dt>Resolution</dt><dd id="resolution">—</dd></div><div><dt>Browser feed</dt><dd id="fps">—</dd></div><div><dt>Frames received</dt><dd id="frames">0</dd></div><div><dt>Delivery</dt><dd>MJPEG</dd></div></dl>
+          <a class="save" id="save" href="/api/frame?download=1" aria-disabled="true" tabindex="-1"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2v10m-4-4 4 4 4-4M3 13v4h14v-4"/></svg>Save current frame</a>
+        </aside>
+      </div>
+      <section class="note" aria-label="About this demo"><span class="note-mark" aria-hidden="true">i</span><p><strong>A near-live view.</strong> Frames arrive one at a time over the USB serial connection. A short delay between images is expected.</p></section>
+    </main>
+    <footer><span>HBVCAM <span class="arrow">→</span> ESP32-P4 <span class="arrow">→</span> Browser</span><span>Runs on your Mac. No cloud required.</span></footer>
+  </div>
+</body>
+</html>

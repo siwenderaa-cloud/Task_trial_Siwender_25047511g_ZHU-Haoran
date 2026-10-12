@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-12",
+  "device": {
+    "usb_vid": "1E45",
+    "usb_pid": "0209",
+    "physical_label_from_user": "HBVCAM F2170HD V66"
+  },
+  "final_build": {
+    "sketch_bytes": 436760,
+    "static_ram_bytes": 24256,
+    "application_sha256": "3be909c7fc674159c6f8997d071d399cc6f6a4e6cc5039af3811c47359d53212",
+    "bootloader_sha256": "efccf3575912276844b619b6f74753a117a6a89e0db3ec1316ba498cf0493892"
+  },
+  "final_upload_hash_verifications": 4,
+  "advertised_mode_count": 22,
+  "startup_and_stream": {
+    "log": "run_boot_640x480.log",
+    "frame_records": 19,
+    "first_total": 30,
+    "last_total": 582,
+    "observed_fps_min": 29.1,
+    "observed_fps_max": 30.0,
+    "dimensions": [
+      [
+        640,
+        480
+      ]
+    ],
+    "distinct_sample_hashes": 19,
+    "usb_errors_max": 0,
+    "drops_max": 0,
+    "overflows_max": 0,
+    "startup_fault_present": true,
+    "capture_failure_present": false
+  },
+  "after_snapshot": {
+    "log": "run_after_snapshot.log",
+    "frame_records": 12,
+    "first_total": 3174,
+    "last_total": 3511,
+    "observed_fps_min": 30.0,
+    "observed_fps_max": 30.0,
+    "dimensions": [
+      [
+        640,
+        480
+      ]
+    ],
+    "distinct_sample_hashes": 12,
+    "usb_errors_max": 0,
+    "drops_max": 0,
+    "overflows_max": 0,
+    "startup_fault_present": false,
+    "capture_failure_present": false
+  },
+  "snapshot": {
+    "file": "hbvcam_640x480.jpg",
+    "bytes": 16712,
+    "width": 640,
+    "height": 480,
+    "sha256": "56a4b2db300fcb3c5e7b61267914d7a6997428a251ec6686a3c0615b2a1c5ed1",
+    "jpeg_markers_valid": true
+  },
+  "jpeg_transfer_saved": true,
+  "camera_capture_verified": true,
+  "startup_stability_verified": false,
+  "untested": [
+    "USB cold power cycle",
+    "camera hot unplug/replug",
+    "long-term load",
+    "1080p capture"
+  ]
+}

@@ -1,0 +1,40 @@
+AI CONVERSATION REFERENCES FOR TASK 2
+Date: 12 October 2026
+
+AI assistance was used for research, feasibility writing, code adaptation,
+debugging and report preparation. Five known conversations used are indexed.
+Five PUBLIC share snapshots were generated with explicit user permission.
+Each is an immutable snapshot of the chat when the share was generated;
+later messages are not included. The sharing service returned audience=public.
+Independent reviewer access was not tested. Local references are secondary.
+The old Task 1 export is a historical partial snapshot, not a Task 2 transcript.
+
+C1  开始 task1 并确认设备配置
+Initial hardware/source research used as background
+Public share: https://chatgpt.com/s/cx_6accbbe22d348191ab1384ffedbc70a6
+Local reference: codex://threads/01a12ee6-c78b-7ea1-872e-72f2183bc672
+thread://01a12ee6-c78b-7ea1-872e-72f2183bc672?hostId=local
+
+C2  查找 OV2710 直链并完成第2、3项
+OV2710 references and corrected HBVCAM model
+Public share: https://chatgpt.com/s/cx_6accbc361d3c8191a95fc768b8916788
+Local reference: codex://threads/01a12ef8-3c98-7523-a933-8436999726a8
+thread://01a12ef8-3c98-7523-a933-8436999726a8?hostId=local
+
+C3  完成 OV2710 直链 Part A
+Part A three-camera feasibility report
+Public share: https://chatgpt.com/s/cx_6accbc43fc8881918510745a9bdc7a52
+Local reference: codex://threads/01a12f10-f906-7050-b2cd-a295ee20b7a0
+thread://01a12f10-f906-7050-b2cd-a295ee20b7a0?hostId=local
+
+C4  查找 OV2710 连接 ESP32-P4 方法
+Carrier/connector investigation
+Public share: https://chatgpt.com/s/cx_6accbc75e0f081918869260ae6f89cf9
+Local reference: codex://threads/01a12f2b-da5c-7d50-ba87-579e7a27fd72
+thread://01a12f2b-da5c-7d50-ba87-579e7a27fd72?hostId=local
+
+C5  编写 OV2710 Arduino 代码
+Driver implementation, tests and report continuation
+Public share: https://chatgpt.com/s/cx_6accbd88c7ec81918e346d99e3c3faf5
+Local reference: codex://threads/01a12f44-2939-7630-89c1-15bdca065c1c
+thread://01a12f44-2939-7630-89c1-15bdca065c1c?hostId=local

@@ -1,0 +1,92 @@
+COMPILE FLASH AND CAPTURE NOTE
+Tested host: Arduino IDE 2.3.10, bundled Arduino CLI 1.5.1 on macOS.
+Tested package: esp32 by Espressif Systems 3.3.12, based on ESP-IDF 5.5.5.
+Chip: ESP32-P4 revision 3.2, CPU 400 MHz, Flash 16 MiB, PSRAM 32 MiB.
+
+CONNECTION
+HBVCAM USB plug -> carrier USB-A host port.
+Right-hand TTL USB-C -> Mac, directly, for power/upload/UART.
+Middle USB-C -> left empty. Download selector -> P4.
+Old OV2710 ribbon -> disconnected.
+The native USB Host controller uses board routing; no general GPIO/SCCB pin
+mapping is needed. Do not start TinyUSB USBHost.begin() or enable native USB
+CDC on the same controller. The public OSPTEK schematic is a routing reference,
+not proof that all details match the photographed carrier revision.
+
+ARDUINO IDE SETTINGS
+Open HBVCAM_USB_PartB/HBVCAM_USB_PartB.ino. Keep the src folder intact.
+Install esp32 by Espressif Systems 3.3.12 using Boards Manager.
+Board: ESP32P4 Dev Module
+Chip Variant: v3.00 or newer
+PSRAM: Enabled
+Flash Size: 16MB
+Flash Mode: DIO
+Flash Frequency: 40MHz
+Partition Scheme: Huge APP
+USB CDC On Boot: Disabled
+Core Debug Level: Info
+Upload Speed: 460800
+Serial Monitor: 115200 baud
+Port: the current TTL serial device. The tested Mac device was
+/dev/cu.usbmodem5B790679131, but enumeration may change.
+No separate Arduino camera library needs to be installed.
+
+EXACT VERIFIED CLI BUILD CONFIGURATION
+The successful build supplied build.img_freq=40m in addition to the menu
+FlashFreq=40 setting. In this core, the menu setting alone may leave a different
+image-header frequency. An IDE-only build has not been verified as identical.
+No installed board-package files were modified to add this override.
+
+From the delivery folder, using arduino-cli on PATH:
+
+arduino-cli compile \
+  --fqbn 'esp32:esp32:esp32p4:ChipVariant=postv3,PSRAM=enabled,FlashSize=16M,FlashMode=dio,FlashFreq=40,PartitionScheme=huge_app,CDCOnBoot=default,DebugLevel=info' \
+  --build-property build.img_freq=40m \
+  --output-dir build \
+  HBVCAM_USB_PartB
+
+arduino-cli upload \
+  --fqbn 'esp32:esp32:esp32p4:ChipVariant=postv3,PSRAM=enabled,FlashSize=16M,FlashMode=dio,FlashFreq=40,PartitionScheme=huge_app,CDCOnBoot=default,DebugLevel=info,UploadSpeed=460800' \
+  --port /dev/cu.usbmodem5B790679131 \
+  --input-dir build \
+  HBVCAM_USB_PartB
+
+On the tested Mac, the CLI executable was:
+/Applications/Arduino IDE.app/Contents/Resources/app/lib/backend/resources/arduino-cli
+These shell commands use POSIX continuation and quoting. Adjust shell syntax
+and serial port names for another operating system; the helper below is POSIX.
+The local Apple Silicon ctags executable required a native host-tool repair
+before compilation. This was a build-host issue, not an extra firmware library.
+The repair is not distributed as a binary in this submission.
+
+ACTUAL FINAL BUILD RESULT
+Application size: 436760 bytes
+Static RAM use: 24256 bytes
+Four flash images passed uploader write-hash verification.
+Complete logs are in HBVCAM_USB_PartB/evidence/.
+
+SUCCESSFUL SERIAL OUTPUT
+The following entries are from the real log, with one long frame line wrapped:
+[UVC_CONNECTED] address=1 VID=0x1E45 PID=0x0209
+[UVC_OPEN] ESP_OK
+[READY] MJPEG 640x480 nominalFPS=30.00
+[FRAME] total=60 fps=30.0 size=18414 width=640 height=480
+        hash=56D09E33 usbErrors=0 drops=0 overflows=0 freePSRAM=31678964
+
+The full log retains a bootloader Load access fault after TTL RTS reset.
+A watchdog reboot recovered before the camera application ran. This issue
+remains open; a working camera stream does not prove reliable startup.
+WAIT/FAIL/CAPTURE FAIL alone does not establish successful capture.
+
+SAVE A LIVE SNAPSHOT
+Close Arduino Serial Monitor so only one process owns the serial port.
+From the HBVCAM_USB_PartB folder:
+
+python3 capture_hbvcam.py --port /dev/cu.usbmodem5B790679131 --output my_snapshot.jpg
+python3 capture_hbvcam.py --port /dev/cu.usbmodem5B790679131 --monitor 20
+
+The helper sends j and receives a newly captured MJPEG frame at runtime.
+It checks byte count, JPEG boundaries and END_JPEG trailer.
+During slow UART transfer the driver pauses USB capture and resumes afterward.
+The helper uses only the Python standard library and was tested on macOS/POSIX.
+Windows helper support has not been validated.

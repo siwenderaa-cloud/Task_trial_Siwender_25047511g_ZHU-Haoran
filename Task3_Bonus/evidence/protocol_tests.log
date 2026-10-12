@@ -1,0 +1,11 @@
+test_bounded_logs (test_protocol.ProtocolTest) ... ok
+test_corrupt_jpeg (test_protocol.ProtocolTest) ... ok
+test_corrupt_trailer (test_protocol.ProtocolTest) ... ok
+test_every_possible_split (test_protocol.ProtocolTest) ... ok
+test_multiple_frames_and_byte_at_a_time (test_protocol.ProtocolTest) ... ok
+test_size_limit (test_protocol.ProtocolTest) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK

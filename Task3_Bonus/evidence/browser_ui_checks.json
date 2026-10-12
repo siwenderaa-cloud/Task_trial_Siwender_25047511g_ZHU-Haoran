@@ -1,0 +1,36 @@
+{
+  "mobile": {
+    "image": [
+      640,
+      480
+    ],
+    "motionRule": true,
+    "pageWidth": 375,
+    "viewport": 390
+  },
+  "desktop": {
+    "image": [
+      640,
+      480
+    ],
+    "pageWidth": 1265,
+    "viewport": 1280
+  },
+  "backendRestartClearsOldFrame": {
+    "frameHidden": true,
+    "placeholderVisible": true,
+    "saveDisabled": "true",
+    "status": "Not connected"
+  },
+  "keyboardStartAndFocusPassed": true,
+  "scrollControlsPassed": true,
+  "saveFrameDownloaded": "browser_saved_frame.jpg",
+  "pausedBadgePassed": true,
+  "serverOffline": {
+    "frameBadge": "Server disconnected \u00b7 last received frame",
+    "imageAlt": "Last received image from HBVCAM",
+    "saveDisabled": "true",
+    "startLabel": "Server offline",
+    "status": "Server disconnected"
+  }
+}

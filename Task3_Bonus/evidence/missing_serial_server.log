@@ -1,0 +1,3 @@
+Camera Stream: http://127.0.0.1:4175
+Press Ctrl+C to stop the server. Camera capture starts only when you press Start stream.
+[camera] [Errno 2] No such file or directory: '/dev/bonus-test-unavailable'

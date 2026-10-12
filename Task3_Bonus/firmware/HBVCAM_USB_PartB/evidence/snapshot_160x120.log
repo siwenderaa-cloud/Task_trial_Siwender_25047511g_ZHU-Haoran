@@ -1,0 +1,10 @@
+ drops=0 overflows=0 freePSRAM=33430004
+ash=CF72FD9F usbErrors=0E609B475 usbErrors=0 drops=0 overflows=0 freePSRAM=33430004
+[FRAME] total=1669 fps=30.0 size=2748 width=160 height=120 hash=F12DF43C usbErrors=0 drops=0 overflows=0 freePSRAM=33430004
+[FRAME] [FRAME] total=1821 fps=30.0 size=2704 width=160 height=120 hash=D7B36D89 usbErrors=0 drops=0 overflows=0 freePSRAM=33430004
+[FRAME] total=1851 fps=30.0 size=2774 width=160 height=120 hash=CCE08562 usbErrors=0 drops=0 overflows=0 freePSRAM=33430004
+[FRAME] total=1882 fps=30.0 size=2770 width=160 height=120 hash=D0ABA829 usbErrors=0 drops=0 overflows=0 freePSRAM=33430004
+[FRAME] total=1913 fps=30.0 size=2792 width=160 height=120 hash=5AC7D759 usbErrors=0 drops=0 overflows=0 freePSRAM=33430004
+[FRAME] total=1943 fps=30.0 size=2794 width=160 height=120 hash=2BA77BB2 usbErrors=0 drops=0 overflows=0 freePSRAM=33430004
+Receiving 160x120, 2774 bytes from /dev/cu.usbmodem5B790679131 ...
+Saved /Users/siwender/Workspace/project-012-ESP32P4摄像头试做/03_过程文件/partb_uvc/hbvcam_160x120.jpg

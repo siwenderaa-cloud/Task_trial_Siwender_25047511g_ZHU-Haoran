@@ -1,0 +1,9 @@
+{
+  "name": "hbvcam-browser-stream",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Real ESP32-P4 camera frames to a local browser over MJPEG",
+  "scripts": { "start": "node server.mjs", "test": "python3 -m unittest discover -s tests -v" },
+  "engines": { "node": ">=20" }
+}
